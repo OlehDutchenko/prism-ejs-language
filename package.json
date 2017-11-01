@@ -2,7 +2,7 @@
   "name": "prism-ejs-language",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "prism-ejs-language.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
