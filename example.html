@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Prism EJS language</title>
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
+	<style>
+		.center {
+			font-family: sans-serif;
+			max-width: 500px;
+			margin: 0 auto;
+			padding: 1rem;
+		}
+		hr {
+			margin: 1.6rem 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="center">
+		<div>
+			<h2>Demo 1</h2>
+			<pre class="language-ejs line-numbers"><code>
+			<%
+				/**
+				 * @const {Array.&lt;Object>} users
+				 * @private
+				 */
+				const users = [{
+					"id": 1,
+					"name": "John Dow",
+					"username": "jd9dj"
+				}, {
+					"id": 2,
+					"name": "Mrs. Smith",
+					"username": "xXx"
+				}];
+			-%>
+			&lt;ul>
+				<% users.forEach(user => { -%>
+					<%- include('user/show', {user: user}); %>
+				<% }); -%>
+			&lt;/ul>
+			</code></pre>
+		</div>
+		<hr>
+		<div>
+			<h2>Demo 2</h2>
+			<pre class="language-ejs"><code>
+			<%
+				let htmlString = '&lt;h2>Demo 2&lt;/h2>';
+				console.log(htmlString);
+			-%>
+			&lt;div>
+				<%- htmlString.toLowerCase() %>
+			&lt;/div>
+			&lt;pre>
+				<%= htmlString.toLowerCase() %>
+			&lt;/pre>
+			&lt;div>
+				<%# htmlString.toLowerCase() %>
+			&lt;/div>
+			</code></pre>
+		</div>
+	</div>
+
+	<link rel="stylesheet" href="http://prismjs.com/themes/prism.css">
+
+	<script src="http://prismjs.com/prism.js"></script>
+	<script src="http://prismjs.com/plugins/normalize-whitespace/prism-normalize-whitespace.js"></script>
+	<script src="./index.js"></script>
+</body>
+</html>

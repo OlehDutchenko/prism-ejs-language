@@ -1,0 +1,8 @@
+demo-1.jpg
+demo-2.jpg
+example.html
+logs
+*.log*
+.idea
+.DS_Store
+thumbs.db
