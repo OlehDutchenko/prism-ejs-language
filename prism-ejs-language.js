@@ -2,7 +2,7 @@
 	'use strict';
 
 	if (typeof Prism === 'undefined') {
-		console.log('Prism not defined');
+		console.log('Prism is not defined');
 		return false;
 	}
 
