@@ -36,7 +36,7 @@
                     "username": "xXx"
                 }];
             -%>
-            &lt;ul>
+            &lt;ul class="users" data-count="<%- users.length %>">
                 <% users.forEach(user => { -%>
                     <%- include('user/show', {user: user}); %>
                 <% }); -%>
@@ -51,13 +51,13 @@
                 let htmlString = '&lt;h2>Demo 2&lt;/h2>';
                 console.log(htmlString);
             -%>
-            &lt;div>
+            &lt;div class="html">
                 <%- htmlString.toLowerCase() %>
             &lt;/div>
-            &lt;pre>
+            &lt;pre class="code">
                 <%= htmlString.toLowerCase() %>
             &lt;/pre>
-            &lt;div>
+            &lt;div class="comment">
                 <%# htmlString.toLowerCase() %>
             &lt;/div>
             </code></pre>
